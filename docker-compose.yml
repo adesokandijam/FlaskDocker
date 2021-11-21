@@ -1,0 +1,21 @@
+version: '3'
+services:
+  web:
+    build:
+      dockerfile: Dockerfile.dev
+      context: .
+    ports:
+      - '5000:5000'
+    restart: always
+    command: python app.py
+    volumes:
+      - ./app:/app
+  postgre:
+    image: 'postgres:latest'
+    environment:
+      - POSTGRES_PASSWORD=dijam
+      - POSTGRES_USER=dijam
+      - POSTGRES_DB=dijam
+    ports:
+
+      - '5432:5432'
