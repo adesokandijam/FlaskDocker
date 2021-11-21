@@ -16,6 +16,3 @@ services:
       - POSTGRES_PASSWORD=dijam
       - POSTGRES_USER=dijam
       - POSTGRES_DB=dijam
-    ports:
-
-      - '5432:5432'
